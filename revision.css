@@ -43,3 +43,8 @@ header{height:68px;padding:0 5%;background:linear-gradient(110deg,#4b607a,#21314
 .brand span{display:inline;margin-left:5px}@media(max-width:480px){.brand{font-size:14px}.brand span{font-size:10px;letter-spacing:.06em}}
 
 .work-gallery[hidden],.viewer-bottom[hidden]{display:none}#detail.single-image[open]{grid-template-rows:70px minmax(0,1fr)}@media(max-width:600px){#detail.single-image[open]{grid-template-rows:58px minmax(0,1fr)}}
+
+/* Keep the cover composition together on wide screens. */
+@media(min-width:1400px){
+  .hero{padding-left:max(5%,calc((100% - 1200px)/2));padding-right:max(5%,calc((100% - 1200px)/2));grid-template-columns:minmax(0,1fr) 430px;column-gap:90px}
+}
